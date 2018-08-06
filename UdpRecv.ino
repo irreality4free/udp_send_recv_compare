@@ -1,7 +1,7 @@
 
-#include <SPI.h>         // needed for Arduino versions later than 0018
+#include <SPI.h>       
 #include <Ethernet.h>
-#include <EthernetUdp.h>         // UDP library from: bjoern@cs.stanford.edu 12/30/2008
+#include <EthernetUdp.h>         
 
 
 // Enter a MAC address and IP address for your controller below.
@@ -88,17 +88,7 @@ void loop() {
     Serial.print ("String - ");
     Serial.println(command);
     
-    
-//    for(int i = 0; i<14; i++){
-//      if(packetBuffer[i] == com[i]){
-//        Serial.println(packetBuffer[i]);
-//      }
-//      else{
-//        
-//        Serial.println("false");
-//        break;
-//      }
-//    }
+
   
     if (command == "Fuck the World")Serial.println("Bingo plus jackpot");
 
