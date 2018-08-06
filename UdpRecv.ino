@@ -100,7 +100,7 @@ void loop() {
 //      }
 //    }
   
-    if (isPermutation(packetBuffer,com,14))Serial.println("Bingo plus jackpot");
+    if (command == "Fuck the World")Serial.println("Bingo plus jackpot");
 
     // send a reply to the IP address and port that sent us the packet we received
     Udp.beginPacket(/*Udp.remoteIP()*/ip_a, /*Udp.remotePort()*/answPort);
