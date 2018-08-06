@@ -39,6 +39,25 @@ bool isPermutation(char* str1, char* str2, int size)
 }
 
 
+void debug(){
+   Serial.print("Received packet of size ");
+   Serial.println(packetSize);
+   Serial.print("From ");
+  
+   IPAddress remote = Udp.remoteIP();
+  
+   for (int i = 0; i < 4; i++) {
+     Serial.print(remote[i], DEC);
+     if (i < 3) {
+       Serial.print(".");
+     }
+   }
+  
+   Serial.print(", port ");
+   Serial.println(Udp.remotePort());
+}
+
+
 
 void setup() {
   // start the Ethernet and UDP:
@@ -61,18 +80,7 @@ void loop() {
 
  String command = "";
  
-//    Serial.print("Received packet of size ");
-//    Serial.println(packetSize);
-//    Serial.print("From ");
-//    IPAddress remote = Udp.remoteIP();
-//    for (int i = 0; i < 4; i++) {
-//      Serial.print(remote[i], DEC);
-//      if (i < 3) {
-//        Serial.print(".");
-//      }
-//    }
-//    Serial.print(", port ");
-//    Serial.println(Udp.remotePort());
+
 
 
 
